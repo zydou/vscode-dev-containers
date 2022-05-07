@@ -11,6 +11,7 @@ This is a modified vscode-devcontainer of the [original miniconda3](https://gith
     - seaborn
     - jupyterlab
     - ipdb
+    - pytest
 
 ## Summary
 
