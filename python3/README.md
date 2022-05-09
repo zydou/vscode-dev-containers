@@ -12,6 +12,7 @@ This is a modified vscode-devcontainer of the [original miniconda3](https://gith
     - jupyterlab
     - ipdb
     - pytest
+    - pre-commit
 
 ## Summary
 

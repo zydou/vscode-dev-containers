@@ -32,7 +32,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         openssh-client \
         procps \
         subversion \
-        wget \    
+        wget \
     && apt-get upgrade -y \
     && bash /tmp/library-scripts/add-notice.sh \
     && mv -f "/tmp/library-scripts/meta.env" /usr/local/etc/vscode-dev-containers/meta.env \
@@ -47,7 +47,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 ENV PIPX_HOME=/usr/local/py-utils \
     PIPX_BIN_DIR=/usr/local/py-utils/bin
 ENV PATH=${PATH}:${PIPX_BIN_DIR}
-RUN bash /tmp/library-scripts/python-debian.sh "none" "/opt/conda" "${PIPX_HOME}" "${USERNAME}" "true" \ 
+RUN bash /tmp/library-scripts/python-debian.sh "none" "/opt/conda" "${PIPX_HOME}" "${USERNAME}" "true" \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* .devcontainer/library-scripts/python-debian.sh
 
 # [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
@@ -64,7 +64,7 @@ COPY environment.yml* .devcontainer/noop.txt /tmp/conda-tmp/
 RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
     && rm -rf /tmp/conda-tmp
 
-RUN mamba install -y numpy pandas scipy matplotlib scikit-Learn seaborn jupyterlab ipdb pytest && \
+RUN mamba install -y numpy pandas scipy matplotlib scikit-Learn seaborn jupyterlab ipdb pytest pre-commit && \
     rm -rf /opt/conda/pkgs
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
