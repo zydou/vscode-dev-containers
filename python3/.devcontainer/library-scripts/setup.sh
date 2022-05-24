@@ -13,7 +13,7 @@ echo "export PATH=${PATH//$(sh -lc 'echo $PATH')/\$PATH}" > /etc/profile.d/00-re
 chmod +x /etc/profile.d/00-restore-env.sh
 
 # Setup default python tools in a venv via pipx to avoid conflicts
-PIPX_PKGS=("pre-commit")
+PIPX_PKGS=("pre-commit" "isort")
 for pkg in ${PIPX_PKGS[@]}; do
     if ! type ${pkg} > /dev/null 2>&1; then
         pipx install --system-site-packages --pip-args '--no-cache-dir --force-reinstall' ${pkg}
