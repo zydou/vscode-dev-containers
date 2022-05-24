@@ -1,11 +1,13 @@
 name: python3
 on:
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["mambaforge"]
+    types:
+      - completed
   push:
-    branches:
-      - master
     paths:
-      - python3/**
+      - python3/.devcontainer/library-scripts/setup.sh
+      - python3/.devcontainer/base.Dockerfile
       - .github/workflows/python3.yml
 jobs:
   build:

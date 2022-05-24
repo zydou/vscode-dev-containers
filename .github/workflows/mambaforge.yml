@@ -1,11 +1,10 @@
 name: mambaforge
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - master
     paths:
-      - mambaforge/**
+      - mambaforge/.devcontainer/library-scripts/**
+      - mambaforge/.devcontainer/add-notice.sh
+      - mambaforge/.devcontainer/base.Dockerfile
       - .github/workflows/mambaforge.yml
 jobs:
   build:
