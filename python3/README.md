@@ -1,34 +1,35 @@
 # Python 3
+
 This is a modified vscode-devcontainer of the [original miniconda3](https://github.com/microsoft/vscode-dev-containers/tree/main/containers/python-3-miniconda).
 
 - Replace the miniconda with [mambaforge](https://github.com/conda-forge/miniforge).
 - Add a bunch of useful packages to the base environment.
-    - numpy
-    - pandas
-    - scipy
-    - matplotlib
-    - scikit-Learn
-    - seaborn
-    - jupyterlab
-    - ipdb
-    - pytest
-    - pre-commit
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - scikit-Learn
+  - seaborn
+  - jupyterlab
+  - ipdb
+  - pytest
+  - pre-commit
 
 ## Summary
 
-*Develop Miniconda applications in Python 3. Installs dependencies from your environment.yml file and the Python extension.*
+_Develop Miniconda applications in Python 3. Installs dependencies from your environment.yml file and the Python extension._
 
-| Metadata | Value |
-|----------|-------|
-| *Contributors* | The [VS Code Python extension](https://marketplace.visualstudio.com/itemdetails?itemName=ms-python.python) team |
-| *Categories* | Core, Languages |
-| *Definition type* | Dockerfile |
-| *Published image* | zydou/python3:latest |
-| *Published image architecture(s)* | x86-64 |
-| *Works in Codespaces* | Yes |
-| *Container host OS support* | Linux, macOS, Windows |
-| *Container OS* | Debian |
-| *Languages, platforms* | Python, Anaconda, Miniconda |
+| Metadata                          | Value                                                                                                           |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| _Contributors_                    | The [VS Code Python extension](https://marketplace.visualstudio.com/itemdetails?itemName=ms-python.python) team |
+| _Categories_                      | Core, Languages                                                                                                 |
+| _Definition type_                 | Dockerfile                                                                                                      |
+| _Published image_                 | zydou/python3:latest                                                                                            |
+| _Published image architecture(s)_ | x86-64                                                                                                          |
+| _Works in Codespaces_             | Yes                                                                                                             |
+| _Container host OS support_       | Linux, macOS, Windows                                                                                           |
+| _Container OS_                    | Debian                                                                                                          |
+| _Languages, platforms_            | Python, Anaconda, Miniconda                                                                                     |
 
 ## Using this definition
 
@@ -44,11 +45,12 @@ You can decide how often you want updates by referencing a [semantic version](ht
 - `zydou/python3:4.12`
 - `zydou/python3:4.12.0`
 - `zydou/python3:4.12.0-0`
-See [here for a complete list of available tags](https://hub.docker.com/r/zydou/python3/tags).
+  See [here for a complete list of available tags](https://hub.docker.com/r/zydou/python3/tags).
 
 Alternatively, you can use the contents of `base.Dockerfile` to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
 ### Using Conda
+
 This dev container and its associated image includes [the `conda` package manager](https://aka.ms/vscode-remote/conda/about). Additional packages installed using Conda will be downloaded from Anaconda or another repository if you configure one. To reconfigure Conda in this container to access an alternative repository, please see information on [configuring Conda channels here](https://aka.ms/vscode-remote/conda/channel-setup).
 
 Access to the Anaconda repository is covered by the [Anaconda Terms of Service](https://aka.ms/vscode-remote/conda/terms), which may require some organizations to obtain a commercial license from Anaconda. **However**, when this dev container or its associated image is used with GitHub Codespaces or GitHub Actions, **all users are permitted** to use the Anaconda Repository through the service, including organizations normally required by Anaconda to obtain a paid license for commercial activities. Note that third-party packages may be licensed by their publishers in ways that impact your intellectual property, and are used at your own risk.
@@ -129,11 +131,13 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then /opt/conda/bin/conda env up
 1. If this is your first time using a development container, please see getting started information on [setting up](https://aka.ms/vscode-remote/containers/getting-started) Remote-Containers or [creating a codespace](https://aka.ms/ghcs-open-codespace) using GitHub Codespaces.
 
 2. To use the pre-built image:
+
    1. Start VS Code and open your project folder or connect to a codespace.
    2. Press <kbd>F1</kbd> select and **Add Development Container Configuration Files...** command for **Remote-Containers** or **Codespaces**.
-   4. Select this definition. You may also need to select **Show All Definitions...** for it to appear.
+   3. Select this definition. You may also need to select **Show All Definitions...** for it to appear.
 
 3. To build a custom version of the image instead:
+
    1. Clone this repository locally.
    2. Start VS Code and open your project folder or connect to a codespace.
    3. Use your local operating system's file explorer to drag-and-drop the locally cloned copy of the `.devcontainer` folder for this definition into the VS Code file explorer for your opened project or codespace.

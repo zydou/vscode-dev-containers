@@ -70,7 +70,3 @@ jobs:
           package_name: ${{ github.workflow }}
           token: ${{ secrets.PAT }}
           user: ${{ github.repository_owner }}
-      - name: Clear
-        if: always()
-        run: |
-          rm -rf ${HOME}/.docker/config.json
