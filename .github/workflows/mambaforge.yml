@@ -32,11 +32,11 @@ jobs:
         uses: docker/build-push-action@v2
         env:
           CONTEXT: ${{ github.workflow }}
-          # 4.12.0-0
+          # 4.12.0-2
           MAJOR: 4
           MINOR: 12
           PATCH: 0
-          PRE_RELEASE: 0
+          PRE_RELEASE: 2
         with:
           context: ./${{ env.CONTEXT}}
           file: ./${{ env.CONTEXT }}/.devcontainer/base.Dockerfile
