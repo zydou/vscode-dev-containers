@@ -61,7 +61,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.DOCKER_PASSWD }}
           repository: ${{ github.repository_owner }}/${{ github.workflow }}
-          short-description: "Dockerized caddy with cloudflare plugin"
+          short-description: "VSCode devcontainer"
           readme-filepath: ${{ github.workflow }}/README.md
       - name: Delete untagged
         uses: dylanratcliffe/delete-untagged-containers@main
